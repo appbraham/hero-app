@@ -14,6 +14,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+
     AppRoutingModule,
     SharedModule,
   ],
