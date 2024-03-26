@@ -9,12 +9,12 @@ const checkAuthStatus = (): boolean | Observable<boolean> => {
   const router: Router = inject(Router);
 
   return authService.checkAuthentication()
-         .pipe(
-           tap( isAuthenticated => console.log('Authenticated:', isAuthenticated)),
-           tap( isAuthenticated => {
-            if( !isAuthenticated )  router.navigate(['./auth/login']);
-          })
-         );
+    .pipe(
+      tap( isAuthenticated => console.log('Authenticated:', isAuthenticated)),
+      tap( isAuthenticated => {
+      if( !isAuthenticated )  router.navigate(['./auth/login']);
+    })
+    );
 }
 
 const canMatchFn: CanMatchFn = (route, segments): boolean | Observable<boolean> => {

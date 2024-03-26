@@ -1,6 +1,6 @@
 import { inject } from '@angular/core';
 import { CanActivateFn, CanMatchFn, Router } from '@angular/router';
-import { Observable, tap } from 'rxjs';
+import { Observable, map, tap } from 'rxjs';
 import { AuthService } from '../services/auth.service';
 
 const checkAuthStatus = (): boolean | Observable<boolean> => {
@@ -9,12 +9,13 @@ const checkAuthStatus = (): boolean | Observable<boolean> => {
   const router: Router = inject(Router);
 
   return authService.checkAuthentication()
-         .pipe(
-           tap( isAuthenticated => console.log('Authenticated:', isAuthenticated)),
-           tap( isAuthenticated => {
-            if( isAuthenticated )  router.navigate(['./']);
-          })
-         );
+    .pipe(
+      tap(isAuthenticated => console.log('Authenticated:', isAuthenticated)),
+      tap(isAuthenticated => {
+        if (isAuthenticated) router.navigate(['./']);
+      }),
+      map(isAuthenticated => !isAuthenticated)
+    );
 }
 
 const canMatchFn: CanMatchFn = (route, segments): boolean | Observable<boolean> => {
