@@ -21,15 +21,17 @@
 
   <mat-divider></mat-divider>
 
-  <mat-card-actions class="justify-content-between">
+  <mat-card-actions class="flex flex-column gap-2 md:flex-row md:justify-content-between">
     <button mat-raised-button
       color="primary"
+      class="w-full"
       [routerLink]="['/heroes/edit', hero.id]">
       <mat-icon>edit</mat-icon>
       Editar
     </button>
 
     <button mat-raised-button
+      class="w-full"
       [routerLink]="['/heroes/', hero.id]">
       <mat-icon>more_horiz</mat-icon>
       Más

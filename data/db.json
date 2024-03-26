@@ -2,7 +2,7 @@
   "users": [
     {
       "id": 1,
-      "usuario": "John Doe",
+      "user": "John Doe",
       "email": "john.due@gmail.com"
     }
   ],
@@ -21,8 +21,7 @@
       "publisher": "DC Comics",
       "alter_ego": "Kal-El",
       "first_appearance": "Action Comics #1",
-      "characters": "Kal-El",
-      "alt_img": "https://i.pinimg.com/474x/db/15/ba/db15bac66d1fb1794d53eaa90e5af7db.jpg"
+      "characters": "Kal-El"
     },
     {
       "id": "dc-flash",
@@ -38,8 +37,7 @@
       "publisher": "DC Comics",
       "alter_ego": "Alan Scott",
       "first_appearance": "All-American Comics #16",
-      "characters": "Alan Scott, Hal Jordan, Guy Gardner, John Stewart, Kyle Raynor, Jade, Sinestro, Simon Baz",
-      "alt_img": null
+      "characters": "Alan Scott, Hal Jordan, Guy Gardner, John Stewart, Kyle Raynor, Jade, Sinestro, Simon Baz"
     },
     {
       "id": "dc-arrow",
@@ -114,6 +112,14 @@
       "characters": "Tony Stark"
     },
     {
+      "id": "marvel-thor",
+      "superhero": "Thor",
+      "publisher": "Marvel Comics",
+      "alter_ego": "Thor Odinson",
+      "first_appearance": "Journey into Myster #83",
+      "characters": "Thor Odinson"
+    },
+    {
       "id": "marvel-hulk",
       "superhero": "Hulk",
       "publisher": "Marvel Comics",
@@ -136,6 +142,14 @@
       "alter_ego": "Matthew Michael Murdock",
       "first_appearance": "Daredevil #1",
       "characters": "Matthew Michael Murdock"
+    },
+    {
+      "id": "marvel-hawkeye",
+      "superhero": "Hawkeye",
+      "publisher": "Marvel Comics",
+      "alter_ego": "Clinton Francis Barton",
+      "first_appearance": "Tales of Suspense #57",
+      "characters": "Clinton Francis Barton"
     },
     {
       "id": "marvel-cyclops",

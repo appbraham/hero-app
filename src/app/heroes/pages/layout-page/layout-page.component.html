@@ -27,11 +27,33 @@
       <mat-icon>menu</mat-icon>
     </button>
 
+    <div class="flex gap-4">
+      <span class="text-sm">{{ user?.user }}</span>
 
-    <button mat-button>
-      <mat-icon>logout</mat-icon>
-      Logout
-    </button>
+      <!-- @if(user){
+        <button mat-button (click)="onLogout()">
+          <mat-icon>logout</mat-icon>
+          Logout
+        </button>
+      } @else {
+        <button mat-button routerLink="/auth/login">
+          <mat-icon>login</mat-icon>
+          Login
+        </button>
+      } -->
+
+      <button *ngIf="user; else loginForm" mat-button (click)="onLogout()">
+        <mat-icon>logout</mat-icon>
+        Logout
+      </button>
+
+      <ng-template #loginForm>
+        <button mat-button routerLink="/auth/login">
+          <mat-icon>login</mat-icon>
+          Login
+        </button>
+      </ng-template>
+    </div>
 
   </mat-toolbar>
 
